@@ -1,0 +1,36 @@
+# Omni-IO MCP server dependencies
+# Install: pip install -r mcp/requirements.txt
+
+# ── Core framework ─────────────────────────
+mcp>=1.0.0
+httpx>=0.27.0
+pyyaml>=6.0
+python-dotenv>=1.0.0            # Load API keys from config/.env
+
+# ── Understanding tools ────────────────────
+openai>=1.50.0                  # Speech recognition (Whisper), Qwen2-Audio (DashScope-compatible API),
+                                 # automatic descriptions of generated images, and document summaries
+google-genai>=1.0.0             # Preferred video + audio understanding path (Gemini). The package is
+                                 # google-genai, not deprecated google-generativeai; they are different
+                                 # pip packages with different import paths.
+
+# ── Generation: image & video ───────────────
+fal-client>=0.4.0               # fal.ai (FLUX.1-schnell images, Kling video)
+
+# ── Generation: audio ───────────────────────
+edge-tts>=6.1.0                 # Microsoft Edge TTS (completely free; no key)
+replicate>=0.30.0               # Replicate MusicGen Large (paid, optional)
+
+# ── Generation: local documents ─────────────
+python-pptx>=0.6.21
+python-docx>=1.1.0
+reportlab>=4.0.0
+openpyxl>=3.1.0                 # Excel generation; also used to read .xlsx for document understanding
+
+# ── Utilities ───────────────────────────────
+playwright>=1.40.0              # Web browsing (after installation, run: playwright install chromium)
+cloudinary>=1.36.0              # Upload local files to public URLs (optional; required for Meshy image-to-3D)
+
+# ── 3D understanding ────────────────────────
+trimesh>=4.0.0                  # 3D-model loading and geometry analysis (pure Python; no GPU dependency)
+matplotlib>=3.8.0               # Multi-angle rendering (Agg backend; no display required)

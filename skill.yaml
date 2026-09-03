@@ -1,0 +1,46 @@
+name: omni-io
+version: 3.0.0
+description: >
+  An omni-modal input and output skill set that supports understanding and generating images,
+  video, audio (sound effects, music, and speech), 3D content, and documents. It provides
+  dependency-aware DAG task scheduling, semantic anchors, and cross-turn asset reuse.
+
+entry: SKILL.md
+
+mcp_servers:
+  omni-io:
+    type: stdio
+    command: python
+    args:
+      - mcp/server.py
+    env:
+      # Understanding tools
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      GEMINI_API_KEY: "${GEMINI_API_KEY}"
+      MISTRAL_API_KEY: "${MISTRAL_API_KEY}"
+      QWEN_API_KEY: "${QWEN_API_KEY}"
+      # Image generation
+      FAL_API_KEY: "${FAL_API_KEY}"
+      # Video generation (the international service also requires WAN_WORKSPACE_ID)
+      WAN_API_KEY: "${WAN_API_KEY}"
+      WAN_WORKSPACE_ID: "${WAN_WORKSPACE_ID}"
+      # Music generation
+      HUGGINGFACE_API_KEY: "${HUGGINGFACE_API_KEY}"
+      REPLICATE_API_TOKEN: "${REPLICATE_API_TOKEN}"
+      # Sound effects, speech, and music (ElevenLabs is the default provider for generate.music)
+      ELEVENLABS_API_KEY: "${ELEVENLABS_API_KEY}"
+      # 3D generation
+      TRIPO_API_KEY: "${TRIPO_API_KEY}"
+      MESHY_API_KEY: "${MESHY_API_KEY}"
+      # Public file hosting (required for Meshy image-to-3D)
+      CLOUDINARY_CLOUD_NAME: "${CLOUDINARY_CLOUD_NAME}"
+      CLOUDINARY_API_KEY: "${CLOUDINARY_API_KEY}"
+      CLOUDINARY_API_SECRET: "${CLOUDINARY_API_SECRET}"
+      # Utilities
+      SEARCH_API_KEY: "${SEARCH_API_KEY}"
+      # Output directory (optional; defaults to the persistent ~/Documents/OmniIO directory).
+      # The ~ is expanded internally by mcp/generate.py and mcp/registry.py, so this does not
+      # depend on whether nested variable expansion is supported here.
+      OMNI_OUTPUT_DIR: "${OMNI_OUTPUT_DIR:-~/Documents/OmniIO}"
+
+config: config/config.yaml

@@ -1,0 +1,161 @@
+# Omni-IO configuration
+#
+# To switch generators, change the provider field under each modality:
+#   provider: fal       → use the fal solution
+#   provider: openai    → use the OpenAI solution
+#
+# Enter API keys in config/.env (copied from .env.example).
+# See setup/api_guide.md for instructions.
+
+# ─────────────────────────────────────────
+# Understanding tools
+# ─────────────────────────────────────────
+understand:
+
+  video:
+    provider: gemini           # Gemini (free tier available)
+    providers:
+      gemini:
+        model: gemini-2.5-flash
+        api_key: ${GEMINI_API_KEY}
+
+  # The provider fields for speech and audio_analysis do not use the ordinary
+  # provider-switching mechanism. When GEMINI_API_KEY is configured,
+  # understand_audio() prefers Gemini (one call covers speech + music/SFX).
+  # If it is not configured or the call fails, the providers below are used.
+  speech:
+    provider: whisper          # Whisper (OpenAI, paid); fallback when Gemini is unavailable
+    providers:
+      whisper:
+        model: whisper-1
+        api_key: ${OPENAI_API_KEY}
+
+  audio_analysis:
+    provider: qwen             # Qwen2-Audio-Instruct via DashScope (same platform as WAN_API_KEY); Gemini fallback
+    providers:
+      qwen:
+        model: qwen2-audio-instruct
+        api_key: ${QWEN_API_KEY}
+
+  document:
+    provider: mistral          # Mistral (free tier available)
+    providers:
+      mistral:
+        model: mistral-ocr-latest
+        api_key: ${MISTRAL_API_KEY}
+
+  3d:
+    provider: local            # Local metadata extraction with trimesh; renders with Blender when installed, otherwise matplotlib; no key required
+    providers:
+      local: {}
+
+# ─────────────────────────────────────────
+# Generation tools
+# ─────────────────────────────────────────
+generate:
+
+  image:
+    # fal: US$10 free credit for new users; FLUX.1-schnell costs about US$0.003/image
+    # OpenAI: gpt-image-2, about US$0.04/image, higher quality
+    provider: openai
+    providers:
+      fal:
+        model: fal-ai/flux/schnell
+        api_key: ${FAL_API_KEY}
+      openai:
+        model: gpt-image-2
+        api_key: ${OPENAI_API_KEY}
+
+  video:
+    # Wan: DashScope Wan2.7, free allowance for new users and good value
+    # Kling: Kling 1.6 via fal.ai, higher quality, uses FAL_API_KEY
+    provider: wan
+    providers:
+      wan:
+        model: wan2.7
+        api_key: ${WAN_API_KEY}
+      kling:
+        model: fal-ai/kling-video/v1.6/standard/text-to-video
+        api_key: ${FAL_API_KEY}
+
+  music:
+    # ElevenLabs: Eleven Music v2, highest quality, up to 10 minutes, vocals,
+    #             multilingual support, and commercial licensing. A paid ElevenLabs
+    #             subscription with Music access is required (uses ELEVENLABS_API_KEY).
+    # Hugging Face: MusicGen with a free inference allowance, up to 30 seconds, with cold-start latency
+    # Replicate: MusicGen Large via Replicate, higher quality, up to 60 seconds, no cold start, pay-as-you-go
+    provider: elevenlabs
+    providers:
+      elevenlabs:
+        model: music_v2
+        api_key: ${ELEVENLABS_API_KEY}
+      huggingface:
+        model: facebook/musicgen-medium
+        api_key: ${HUGGINGFACE_API_KEY}
+      replicate:
+        model: meta/musicgen
+        api_key: ${REPLICATE_API_TOKEN}
+
+  sfx:
+    # ElevenLabs: free monthly allowance and highest quality
+    provider: elevenlabs
+    providers:
+      elevenlabs:
+        api_key: ${ELEVENLABS_API_KEY}
+
+  speech:
+    # Edge TTS: Microsoft Edge TTS, completely free, no key, excellent Chinese quality
+    # OpenAI: tts-1, US$0.015 per 1K characters, more natural
+    # ElevenLabs: highest quality, free tier available
+    provider: edge_tts
+    providers:
+      edge_tts:
+        voice: zh-CN-XiaoxiaoNeural    # Chinese: XiaoxiaoNeural / YunxiNeural
+      openai:
+        model: tts-1
+        api_key: ${OPENAI_API_KEY}
+      elevenlabs:
+        api_key: ${ELEVENLABS_API_KEY}
+
+  3d:
+    # Tripo: Tripo3D v2, free credits upon registration, high quality
+    # Meshy: Meshy v2, free tier available, fast
+    provider: tripo
+    providers:
+      tripo:
+        model: v2.5-20250123
+        api_key: ${TRIPO_API_KEY}
+      meshy:
+        api_key: ${MESHY_API_KEY}
+
+  document:
+    # Local generation (python-pptx / python-docx / reportlab); no API key required.
+    # The calling agent (Claude, Codex, etc.) plans the content structure before
+    # making the call. The MCP server only renders content and does not call an LLM.
+    provider: local
+    providers:
+      local: {}
+
+# ─────────────────────────────────────────
+# Default parameters
+# ─────────────────────────────────────────
+defaults:
+
+  image:
+    aspect_ratio: "1:1"
+    quality: standard
+
+  video:
+    duration_seconds: 10
+    aspect_ratio: "16:9"
+
+  sfx:
+    duration_seconds: 15
+
+  music:
+    duration_seconds: 30
+    instrumental: true
+
+  speech:
+    language: zh-CN
+    speed: 1.0
