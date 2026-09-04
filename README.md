@@ -63,7 +63,7 @@ This position is intentionally reserved immediately after the teaser.
 
 ## News
 
-- **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play Agent Harness for omni-modal understanding, generation, and cross-modal workflows.
+- **[Sep 2026]** We release **Omni-IO Skills**, a plug-and-play Agent Harness for omni-modal understanding, generation, and cross-modal workflows.
 
 ## Repository Structure
 
