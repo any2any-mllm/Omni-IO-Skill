@@ -36,7 +36,7 @@ Keep the video directly below the header and above News.
 
 ## News
 
-- **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
+- **[Sep 2026]** We release **Omni-IO Skills**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
 
 ## Examples
 
