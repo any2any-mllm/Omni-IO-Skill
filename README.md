@@ -1,96 +1,92 @@
 <div align="center">
 
 <h1>
-  <img src="assets/omni-io-logo.png" width="72" align="absmiddle" alt="Omni-IO Skills logo">
-  Omni-IO Skills: Harnessing Your Agent Omni-Native
+  <img src="assets/omni-io-logo.png" width="60" align="absmiddle" alt="Omni-IO Skills logo">
+  Omni-IO Skills
 </h1>
 
-<p>
-  <a href="https://liyanlin06.github.io/">Yanlin Li</a><sup>1,†</sup>
-  &nbsp;&nbsp;
-  <a href="https://liyanlin06.github.io/">Mingyang Hao</a><sup>1</sup>
-  &nbsp;&nbsp;
-  <a href="https://sqwu.top/">Shengqiong Wu</a><sup>2</sup>
-  &nbsp;&nbsp;
-  <a href="https://haofei.vip/">Hao Fei</a><sup>2,‡</sup>
-  &nbsp;&nbsp;
-  <a href="https://www.comp.nus.edu.sg/cs/people/leeml/">Mong-Li Lee</a><sup>1</sup>
-  &nbsp;&nbsp;
-  <a href="https://www.comp.nus.edu.sg/cs/people/whsu/">Wynne Hsu</a><sup>1</sup>
-</p>
+**Harnessing your coding agent to become omni-native—with multimodal eyes, ears, and creative tools.**
+
+Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating, and coordinating images, video, audio, documents, 3D assets, code, and web content—all from natural-language requests.
 
 <p>
-  <sup>1</sup>National University of Singapore
-  &nbsp;&nbsp;&nbsp;
-  <sup>2</sup>University of Oxford
-</p>
-
-<p>
-  <sup>†</sup><a href="mailto:yanlin.li@u.nus.edu">yanlin.li@u.nus.edu</a>
-  &nbsp;&nbsp;
-  <sup>‡</sup>Corresponding author and project lead:
-  <a href="mailto:haofei7419@gmail.com">haofei7419@gmail.com</a>
-</p>
-
-<p>
-  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square&logo=arxiv" alt="arXiv technical report"></a>
-  <a href="https://github.com/any2any-mllm/Omni-IO-Skill"><img src="https://img.shields.io/badge/Code-GitHub-181717?style=flat-square&logo=github" alt="GitHub repository"></a>
   <a href="https://github.com/any2any-mllm/Omni-IO-Skill/stargazers"><img src="https://img.shields.io/github/stars/any2any-mllm/Omni-IO-Skill?style=flat-square&logo=github&label=Stars" alt="GitHub stars"></a>
-  <a href="#quick-start"><img src="https://img.shields.io/badge/Agent_Hosts-Codex_%7C_Claude_Code_%7C_More-6d5dfc?style=flat-square" alt="Codex, Claude Code, and other agent hosts"></a>
+  <a href="https://agentskills.io/"><img src="https://img.shields.io/badge/Agent_Skills-compatible-6d5dfc?style=flat-square" alt="Agent Skills compatible"></a>
+  <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP-stdio-0b7285?style=flat-square" alt="MCP stdio server"></a>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 or newer">
 </p>
-
-<p><strong>A plug-and-play Omni-modal Agent Harness for Codex, Claude Code, and other Agent Skills + MCP hosts.</strong></p>
 
 <p>
   <a href="#news">News</a> ·
+  <a href="#examples">Examples</a> ·
+  <a href="#repository-structure">Repository Structure</a> ·
   <a href="#quick-start">Quick Start</a> ·
-  <a href="#how-to-use">How to Use</a> ·
-  <a href="#try-these-instructions">Try It</a> ·
-  <a href="#faq">FAQ</a>
+  <a href="#what-you-can-do">Capabilities</a> ·
+  <a href="#how-it-works">How It Works</a> ·
+  <a href="#citation">Citation</a>
 </p>
 
 </div>
 
-<p align="center">
-  <img src="assets/omni-io-teaser.png" width="100%" alt="Omni-IO Skills turns general-purpose agents into omni-native systems">
-</p>
-
 <!--
-DEMO VIDEO SLOT
-Place the final GitHub user-attachment URL or an assets/demo.mp4 preview here.
-This position is intentionally reserved immediately after the teaser.
+PROMO VIDEO SLOT
+Upload the final project video to GitHub, then place its user-attachment URL here.
+Keep the video directly below the header and above News.
 -->
 
 ## News
 
-- **[Sep 2026]** We release **Omni-IO Skills**, a plug-and-play Agent Harness for omni-modal understanding, generation, and cross-modal workflows.
+- **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
+
+## Examples
+
+<!--
+Add each recorded example as one row. Put the prompt and any input assets in the
+left column, and embed the corresponding output video in the right column.
+-->
+
+<table>
+  <tr>
+    <th width="50%">Input</th>
+    <th width="50%">Output</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
 
 ## Repository Structure
 
 ```text
 Omni-IO-Skills/
-├── SKILL.md                 # Skill entry point and routing index
+├── SKILL.md                 # Entry point and routing index
 ├── skill.yaml               # Skill and MCP declaration
-├── skills/                  # Atomic understanding, generation, and utility Skills
-├── expert/                  # Professional artifact-production Skills
-├── scenarios/               # Application-level, multi-deliverable Skills
-├── orchestration/           # Task dependencies and asset reuse
-├── mcp/                     # Standardized multimodal tool server
+├── skills/                  # Atomic understanding, generation, and utility skills
+├── expert/                  # Professional single-deliverable workflows
+├── scenarios/               # Multi-deliverable application workflows
+├── orchestration/           # Dependencies, review, interruption, and asset reuse
+├── mcp/                     # Multimodal tool server
 ├── config/                  # Provider bindings and local credentials
 ├── formats/                 # Internal task declaration formats
 ├── setup/                   # Setup and provider documentation
-└── assets/                  # README and paper assets
+└── assets/                  # README visuals and media
 ```
 
 ## Quick Start
 
-Omni-IO Skills works with any host agent that can load an [Agent Skills](https://agentskills.io/) compatible directory and connect to a local **stdio MCP server**. The Skill teaches the host how to plan multimodal work; the MCP server gives it the executable tools.
-
-> [!NOTE]
-> The commands target macOS, Linux, and WSL and require Python 3.10+. On native Windows, use PowerShell virtual-environment activation and absolute paths.
+Omni-IO works with hosts that can load an [Agent Skills](https://agentskills.io/) directory and connect to a local **stdio MCP server**. The commands below support macOS, Linux, and WSL and require Python 3.10+.
 
 > [!TIP]
-> **Agent-assisted setup:** open this repository in Codex or Claude Code and ask it to install Omni-IO Skills for the current host by following this Quick Start. Tell it which capabilities you want first, so it requests only the credentials you actually need.
+> Open this repository in Codex or Claude Code and ask: **“Install Omni-IO Skills for this host by following the README Quick Start.”** The agent can perform the local setup and tell you which optional credentials are needed for the capabilities you choose.
 
 ### 1. Install the runtime
 
@@ -104,28 +100,25 @@ python -m pip install -r mcp/requirements.txt
 playwright install chromium
 ```
 
-`playwright install chromium` is required only for the local browsing capability.
+`playwright install chromium` is needed only for the local browsing capability.
 
-### 2. Configure the capabilities you need
+### 2. Create your local configuration
 
 ```bash
 cp config/.env.example config/.env
 ```
 
-1. Review the [feature list](setup/feature_list.md) and choose the capabilities you want.
-2. Add only their credentials to `config/.env`. Unused keys can remain blank.
-3. If you want a different backend, change the corresponding `provider` in [`config/config.yaml`](config/config.yaml).
-4. Keep `config/.env` private. It is ignored by Git and must never be committed.
+Choose a persistent output directory with `OMNI_OUTPUT_DIR`. If you do not set one, Omni-IO uses `~/Documents/OmniIO`.
 
-The active values in `config/config.yaml` are the source of truth for provider selection. The [API guide](setup/api_guide.md) explains credential names and available alternatives.
+You do not need every API key. Start with the capabilities you want, add only their credentials to `config/.env`, and select providers in [`config/config.yaml`](config/config.yaml). See the [feature list](setup/feature_list.md) and [provider guide](setup/api_guide.md) for the available options.
 
-Choose a persistent output directory as `OMNI_OUTPUT_DIR`. All generated files and the reusable asset registry are stored there. If omitted, the default is `~/Documents/OmniIO`.
+> [!IMPORTANT]
+> Keep `config/.env` private. It is ignored by Git and should never be committed.
 
-### 3. Connect your host agent
+### 3. Connect your agent
 
-#### Codex
-
-Install the Skill in Codex's user-level skill directory and register the MCP server:
+<details open>
+<summary><strong>Codex</strong></summary>
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
@@ -138,11 +131,12 @@ codex mcp add omni-io \
 codex mcp list
 ```
 
-Start a new Codex session after setup. If the Skill does not appear immediately, restart Codex.
+Start a new Codex session after setup.
 
-#### Claude Code
+</details>
 
-Install the Skill in Claude Code's user-level skill directory and register the MCP server:
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 ```bash
 mkdir -p "$HOME/.claude/skills"
@@ -158,10 +152,12 @@ claude mcp list
 
 Quit and reopen Claude Code after setup.
 
+</details>
+
 <details>
 <summary><strong>Other Agent Skills + MCP hosts</strong></summary>
 
-Connect the host's skill loader to this repository's root `SKILL.md`, then register a local stdio MCP server with:
+Point the host's skill loader to this repository's root `SKILL.md`, then register a local stdio MCP server with:
 
 | Field | Value |
 |---|---|
@@ -169,158 +165,170 @@ Connect the host's skill loader to this repository's root `SKILL.md`, then regis
 | Arguments | `/absolute/path/to/Omni-IO-Skills/mcp/server.py` |
 | Environment | `OMNI_OUTPUT_DIR=/absolute/path/to/a/persistent/workspace` |
 
-The host must expose the Skill and the MCP server to the same agent session.
+The host must expose both the Skill and the MCP server to the same agent session.
 
 </details>
 
-### 4. Verify the installation
+### 4. Verify the setup
 
-After restarting the host:
-
-1. Confirm that `omni-io` appears in the host's MCP list and is connected.
-2. Start a new conversation and send:
-
-   ```text
-   Check my Omni-IO configuration and tell me which capabilities are ready.
-   ```
-
-3. Confirm that it reports three groups: ready capabilities, capabilities that need credentials, and key-free capabilities.
-
-If MCP registration succeeds but the Skill is not detected, confirm that the `omni-io` symlink points to this repository and then restart the host.
-
-For a longer Claude Code walkthrough, see [`setup/quickstart.md`](setup/quickstart.md).
-
-## How to Use
-
-### Just describe the outcome
-
-Omni-IO Skills triggers automatically when a request involves understanding, generating, transforming, or combining multimedia. You normally do **not** need to mention `omni-io`, choose a Skill, or name an MCP tool.
-
-A useful instruction contains as many of these elements as the task requires:
+Start a new conversation and send:
 
 ```text
-Input + Task + Deliverable + Constraints + Reuse
+Check my Omni-IO configuration and tell me which capabilities are ready.
 ```
 
-- **Input:** attach files, provide URLs, or give local paths that the host can access.
-- **Task:** state what should be understood, created, transformed, or combined.
-- **Deliverable:** specify the files you want, such as an image, video, audio track, document, 3D model, webpage, or a coordinated package.
-- **Constraints:** include format, dimensions, aspect ratio, duration, language, style, required text, or target platform.
-- **Reuse:** refer naturally to a previous result when it should be used again.
+A working setup reports which capabilities are ready, which need credentials, and which have key-free paths. If the MCP server connects but the Skill does not appear, verify the symlink and restart the host.
 
-You can omit details you do not care about. The agent should ask only for missing choices that materially affect the result.
+For a longer walkthrough, see [`setup/quickstart.md`](setup/quickstart.md).
 
-### What to expect
+## One request. Many modalities. One reusable workflow.
 
-1. **First multimodal request:** the agent checks the active configuration once and tells you what is ready.
-2. **Execution:** the agent chooses the appropriate Omni-IO Skills and providers automatically. Independent deliverables may run in parallel.
-3. **Delivery:** completed files are returned with local paths. Professional deliverables are inspected before delivery when the required understanding capability is available.
-4. **Later requests:** registered outputs can be found and reused without generating them again.
+Most agent setups treat every media tool as a separate integration. Omni-IO gives the host agent one coherent workflow: it understands the request, selects the right skills and providers, executes independent work in parallel, reviews professional deliverables, and keeps successful outputs available for later reuse.
 
-### Inputs, outputs, and cross-turn reuse
+| Understand | Create | Coordinate | Reuse |
+|---|---|---|---|
+| Inspect images, video, audio, documents, and 3D assets | Generate media, documents, code, and complete deliverables | Plan multi-step jobs with dependency-aware execution | Refer to prior outputs naturally across tasks and restarts |
 
-- Local inputs must remain accessible to the host for the duration of the task. If a path is outside the host's accessible workspace, attach the file or move it into an accessible directory.
-- Generated files are written under `OMNI_OUTPUT_DIR`.
-- The same directory contains `registry.json`, which records successful outputs and allows natural references such as “the last image” or “the video from the previous task.”
-- Reuse works across conversations and host restarts as long as they point to the same `OMNI_OUTPUT_DIR` and `registry.json` is preserved.
-- To keep separate projects isolated, give each project a different `OMNI_OUTPUT_DIR`.
+Omni-IO keeps your existing agent as the reasoning core. The repository adds the skills, tools, provider routing, and persistent asset layer around it.
 
-<a id="try-these-instructions"></a>
-## Try These Instructions
+## What You Can Do
 
-<table>
-  <tr>
-    <th width="28%">Task</th>
-    <th width="72%">Instruction</th>
-  </tr>
-  <!-- Add instruction examples here. -->
-</table>
+<p align="center">
+  <img src="assets/skills.png" width="100%" alt="Scenario, expert, and atomic skills included in Omni-IO">
+</p>
+
+### Work with individual modalities
+
+| Modality | Understand | Create |
+|---|---|---|
+| Image | Visual analysis, description, OCR | Text-to-image and reference-guided generation |
+| Video | Scene analysis and subtitle extraction | Video generation and multi-shot production |
+| Audio | Speech recognition and audio classification | Speech, music, and sound effects |
+| Documents | Extract content from PDF, Word, PowerPoint, and Excel | Generate PDF, Word, PowerPoint, and Excel files |
+| 3D | Inspect geometry and render previews | Generate 3D assets |
+| Code & web | Browse and search for supporting information | Generate code, Markdown, and webpages |
+
+### Produce complete deliverables
+
+Omni-IO can route a request through three levels of work:
+
+- **Atomic Skills** handle one focused operation, such as analyzing an image or generating speech.
+- **Expert Skills** assemble and review one polished artifact, such as a poster or a multi-shot video.
+- **Scenario Skills** coordinate a set of related deliverables for social media, office work, job applications, education, events, or game assets.
+
+You describe the outcome. The host agent chooses the appropriate level automatically.
+
+## How It Works
+
+<p align="center">
+  <img src="assets/overview.png" width="100%" alt="Omni-IO architecture overview">
+</p>
+
+1. **The Skill interprets the request.** It selects an atomic, expert, or scenario workflow and builds the task dependencies.
+2. **The MCP runtime executes the work.** Understanding, generation, and utility tools expose a consistent interface to the host agent.
+3. **Configuration selects providers.** Each capability can use the provider configured in `config/config.yaml` without changing the higher-level workflow.
+4. **The asset registry preserves outputs.** Successful files receive stable records so later requests can find and reuse them.
+
+### Dependency-aware execution
+
+<p align="center">
+  <img src="assets/workflow.png" width="100%" alt="Omni-IO plans a dependency graph and executes ready tasks in parallel">
+</p>
+
+Omni-IO represents multi-step work as an internal dependency graph. Independent tasks can run in parallel; dependent tasks wait for their inputs. Expert workflows inspect the finished deliverable and selectively redo only the parts that failed review.
+
+### Persistent asset reuse
+
+Generated files are stored under `OMNI_OUTPUT_DIR` together with `registry.json`. You can refer naturally to “the last image,” “the previous video,” or another registered output without generating it again. Reuse continues across conversations and host restarts as long as the same output directory is used.
+
+## Configuration
+
+Omni-IO separates the workflow from the provider. You can change a backend in [`config/config.yaml`](config/config.yaml) while keeping the same user-facing request and skill behavior.
+
+- Some capabilities can run locally or through host-native features, including document generation, code and Markdown generation, Edge TTS speech, local 3D inspection, and Playwright browsing.
+- Model-backed generation, media understanding, transcription, and search can be enabled individually with provider credentials.
+- Provider availability, pricing, and free allowances can change. Review [`setup/feature_list.md`](setup/feature_list.md) and [`setup/api_guide.md`](setup/api_guide.md) before choosing a backend.
+- Changes to `config/.env` or `config/config.yaml` take effect after the MCP process restarts.
+
+To isolate separate projects, assign each one a different `OMNI_OUTPUT_DIR`.
 
 ## FAQ
 
 <details>
 <summary><strong>Do I need every API key?</strong></summary>
 
-No. Configure only the capabilities you want. Where supported by the host, image understanding and code or Markdown generation are host-native. Local document generation, Edge TTS speech, local 3D inspection, and Playwright browsing also have key-free paths in the current configuration.
-
-</details>
-
-<details>
-<summary><strong>How do I know the installation worked?</strong></summary>
-
-Run `codex mcp list` or `claude mcp list` and confirm that `omni-io` is present and connected. Then start a new conversation and ask the agent to check the Omni-IO configuration. A successful check reports ready, missing, and key-free capabilities.
+No. Configure only the capabilities you plan to use. The initial configuration check identifies what is ready and what needs a credential, without blocking unrelated capabilities.
 
 </details>
 
 <details>
 <summary><strong>Why did the Skill not trigger automatically?</strong></summary>
 
-Confirm that the installation link exists at `$HOME/.agents/skills/omni-io` for Codex or `$HOME/.claude/skills/omni-io` for Claude Code and points to this repository. Restart the host after installing or changing the Skill. The request must also involve multimedia understanding, generation, transformation, or a related multi-deliverable workflow.
+Confirm that the `omni-io` symlink points to this repository, then restart the host. The request must also involve multimedia understanding, generation, transformation, or a related multi-deliverable workflow.
 
 </details>
 
 <details>
 <summary><strong>What should I do if the MCP server is disconnected?</strong></summary>
 
-Run the server directly from the repository to expose the startup error:
+Run the server directly to expose the startup error:
 
 ```bash
 source .venv/bin/activate
 python mcp/server.py
 ```
 
-Missing packages usually mean the virtual environment is inactive or `mcp/requirements.txt` was not installed. Configuration errors should be fixed in `config/.env` or `config/config.yaml`. Restart the host after correcting the problem.
+Missing packages usually mean the virtual environment is inactive or `mcp/requirements.txt` was not installed. Fix configuration errors in `config/.env` or `config/config.yaml`, then restart the host.
 
 </details>
 
 <details>
-<summary><strong>Why did changes to API keys or providers not take effect?</strong></summary>
+<summary><strong>Why did changes to keys or providers not take effect?</strong></summary>
 
-The MCP process reads `config/.env` and `config/config.yaml` when it starts. Quit and reopen the host, or otherwise restart its `omni-io` MCP server, after changing either file.
-
-</details>
-
-<details>
-<summary><strong>Is Omni-IO Skills a new foundation model?</strong></summary>
-
-No. It is an Agent Harness. It keeps the host agent's reasoning core unchanged and composes Skills, tools, specialist backends, execution control, and persistent artifacts around it.
+The MCP process reads `config/.env` and `config/config.yaml` when it starts. Restart the host—or just the `omni-io` MCP server—after changing either file.
 
 </details>
 
 <details>
-<summary><strong>Can I use only one Atomic Skill?</strong></summary>
+<summary><strong>Does Omni-IO replace my model or agent?</strong></summary>
 
-Yes. A one-step request routes directly to the relevant Atomic Skill. Scenario and Expert workflows activate only when the requested outcome needs broader coordination or professional assembly.
+No. Your host agent remains the reasoning core. Omni-IO adds reusable instructions, multimodal tools, provider selection, workflow coordination, and persistent artifacts around it.
+
+</details>
+
+<details>
+<summary><strong>Can I use only one capability?</strong></summary>
+
+Yes. A one-step request routes directly to the relevant Atomic Skill. Expert and Scenario workflows activate only when the requested outcome needs broader production or coordination.
 
 </details>
 
 <details>
 <summary><strong>Where are generated files stored?</strong></summary>
 
-Under `OMNI_OUTPUT_DIR`, together with the persistent `registry.json`. If the variable is omitted, the default is `~/Documents/OmniIO`.
+Under `OMNI_OUTPUT_DIR`, together with the persistent `registry.json`. The default is `~/Documents/OmniIO`.
 
 </details>
 
+## Community
+
+Questions, bug reports, feature requests, and workflow ideas are welcome in [GitHub Issues](https://github.com/any2any-mllm/Omni-IO-Skill/issues). If Omni-IO is useful to you, consider starring the repository so more agent builders can find it.
+
 ## Citation
 
-<!-- Citation will be added after the public arXiv record is available. -->
+If you are interested in Omni-IO Skills, please contact [Yanlin Li](mailto:yanlin.li@u.nus.edu) or [Hao Fei](mailto:haofei7419@gmail.com). If you use this project in your research or applications, please cite our paper:
 
----
+> [!NOTE]
+> The BibTeX entry below is a temporary placeholder. Replace the arXiv identifier and publication details when the paper becomes public.
 
-<div align="center">
-
-<strong>Keep the reasoning core. Make the agent omni-native.</strong>
-
-<br><br>
-
-<a href="https://github.com/any2any-mllm/Omni-IO-Skill">Code</a> ·
-<a href="#quick-start">Install</a> ·
-<a href="setup/api_guide.md">Provider Guide</a> ·
-<a href="https://github.com/any2any-mllm/Omni-IO-Skill/issues">Issues</a>
-
-</div>
-
-<!-- PAPER LINK SLOT: replace the arXiv homepage URL with the public paper URL when available. -->
+```bibtex
+@article{li2026omniio,
+  title   = {Omni-IO Skills: Harnessing Your Agent Omni-Native},
+  author  = {Li, Yanlin and Hao, Mingyang and Wu, Shengqiong and Fei, Hao and Lee, Mong-Li and Hsu, Wynne},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
+```
 
 ## Star History
 
