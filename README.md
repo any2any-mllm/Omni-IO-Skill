@@ -318,8 +318,6 @@ Questions, bug reports, feature requests, and workflow ideas are welcome in [Git
 
 If you are interested in Omni-IO Skills, please contact [Yanlin Li](mailto:yanlin.li@u.nus.edu) or [Hao Fei](mailto:haofei7419@gmail.com). If you use this project in your research or applications, please cite our paper:
 
-> [!NOTE]
-> The BibTeX entry below is a temporary placeholder. Replace the arXiv identifier and publication details when the paper becomes public.
 
 ```bibtex
 @article{li2026omniio,
