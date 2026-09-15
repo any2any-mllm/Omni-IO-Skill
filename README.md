@@ -14,29 +14,63 @@ Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating
   <a href="https://agentskills.io/"><img src="https://img.shields.io/badge/Agent_Skills-compatible-6d5dfc?style=flat-square" alt="Agent Skills compatible"></a>
   <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP-stdio-0b7285?style=flat-square" alt="MCP stdio server"></a>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 or newer">
+  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square&logo=arxiv" alt="arXiv paper"></a>
 </p>
 
 <p>
   <a href="#news">News</a> ·
+  <a href="#what-you-can-do">Capabilities</a> ·
   <a href="#examples">Examples</a> ·
   <a href="#repository-structure">Repository Structure</a> ·
   <a href="#quick-start">Quick Start</a> ·
-  <a href="#what-you-can-do">Capabilities</a> ·
   <a href="#how-it-works">How It Works</a> ·
   <a href="#citation">Citation</a>
 </p>
 
 </div>
 
-<!--
-PROMO VIDEO SLOT
-Upload the final project video to GitHub, then place its user-attachment URL here.
-Keep the video directly below the header and above News.
--->
-
 ## News
 
-- **[Sep 2026]** We release **Omni-IO Skills**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
+- **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
+
+## What You Can Do
+
+**Omni is about the breadth of work your agent can accomplish.** Start with a real goal—not a tool or file format—and Omni-IO can understand the inputs, plan the work, create the required assets, assemble complete deliverables, inspect the result, and reuse it in whatever comes next.
+
+<!--
+PR VIDEO SLOT
+Upload the final project video to GitHub, then place its user-attachment URL here.
+Use the video to show real tasks progressing from user input to finished results.
+-->
+
+### Omni Tasks
+
+| Scenario | Tasks you can hand to Omni-IO |
+|---|---|
+| **Office & meetings** | Transcribe meeting or interview recordings; organize minutes, decisions, and action items; turn source materials into Word or PDF reports; build company and training presentations; structure tabular data as Excel workbooks. |
+| **Research & knowledge work** | Search and browse the web; extract content from PDFs, Word files, presentations, and spreadsheets; OCR images; analyze source material; synthesize findings into summaries, briefs, or reports. |
+| **Marketing & social media** | Plan platform-specific content; write campaign and post copy; create product images, social covers, and promotional posters; produce short videos with narration, music, and captions; assemble multi-asset campaign packages. |
+| **Visual design & communication** | Generate illustrations and concept art; design invitations, posters, covers, and promotional graphics with accurate text layout; inspect finished designs and selectively rework weak visual or typography layers. |
+| **Video & audio production** | Analyze video scenes, subtitles, speech, and audio content; write scripts and storyboards; generate video shots, narration, music, and sound effects; assemble, caption, inspect, and refine complete videos. |
+| **Education & training** | Turn a topic, textbook, outline, or existing material into course structures, training decks, handouts, explanatory diagrams, narration, and complete educational or popular-science videos. |
+| **Career & personal branding** | Restructure an existing resume; create targeted resumes and cover letters; build interview or self-introduction presentations; produce spoken introductions and complete personal-brand videos. |
+| **Events & celebrations** | Create invitations and event posters with locked dates, names, and venues; generate ambient music and atmosphere visuals; turn event photos into teaser or recap videos. |
+| **Games, 3D & interactive experiences** | Develop character, prop, or environment concept art; turn a reference into a GLB 3D model; create rotation clips or multi-shot showcases; combine assets in an interactive presentation webpage. |
+| **Custom multi-step projects** | Combine any of these tasks into a dependency-aware workflow; run independent work in parallel; pass outputs into downstream tasks; inspect professional deliverables; reuse registered assets across later requests and sessions. |
+
+These scenarios are examples, not a closed list of templates. A request can use one task, combine several functions across scenarios, or become a complete multi-deliverable workflow.
+
+### Omni Modalities
+
+Modalities are the building blocks rather than the starting point. Any of them can serve as an input, an output, or an intermediate asset inside a larger task.
+
+| Modality | Understand | Create |
+|---|---|---|
+| Text, documents & code | Extract and organize PDF, Word, PowerPoint, Excel, Markdown, code, and webpage content | Generate Markdown, Word, PDF, PowerPoint, Excel, code, and webpages |
+| Image | Visual analysis, description, and OCR | Text-to-image generation |
+| Video | Scene analysis and subtitle extraction | Video clips and complete multi-shot productions |
+| Audio | Speech recognition and audio classification | Speech, music, and sound effects |
+| 3D | Geometry inspection and rendered previews | GLB asset generation |
 
 ## Examples
 
@@ -191,34 +225,17 @@ Most agent setups treat every media tool as a separate integration. Omni-IO give
 
 Omni-IO keeps your existing agent as the reasoning core. The repository adds the skills, tools, provider routing, and persistent asset layer around it.
 
-## What You Can Do
+## How It Works
+
+### Skill hierarchy
+
+Omni-IO routes each request through the level of coordination it actually needs: Scenario Skills organize broad multi-deliverable goals, Expert Skills professionally assemble and review a finished artifact, and Atomic Skills perform focused understanding, generation, and utility operations.
 
 <p align="center">
-  <img src="assets/skills.png" width="100%" alt="Scenario, expert, and atomic skills included in Omni-IO">
+  <img src="assets/skills.png" width="100%" alt="Scenario, expert, and atomic skill hierarchy in Omni-IO">
 </p>
 
-### Work with individual modalities
-
-| Modality | Understand | Create |
-|---|---|---|
-| Image | Visual analysis, description, OCR | Text-to-image and reference-guided generation |
-| Video | Scene analysis and subtitle extraction | Video generation and multi-shot production |
-| Audio | Speech recognition and audio classification | Speech, music, and sound effects |
-| Documents | Extract content from PDF, Word, PowerPoint, and Excel | Generate PDF, Word, PowerPoint, and Excel files |
-| 3D | Inspect geometry and render previews | Generate 3D assets |
-| Code & web | Browse and search for supporting information | Generate code, Markdown, and webpages |
-
-### Produce complete deliverables
-
-Omni-IO can route a request through three levels of work:
-
-- **Atomic Skills** handle one focused operation, such as analyzing an image or generating speech.
-- **Expert Skills** assemble and review one polished artifact, such as a poster or a multi-shot video.
-- **Scenario Skills** coordinate a set of related deliverables for social media, office work, job applications, education, events, or game assets.
-
-You describe the outcome. The host agent chooses the appropriate level automatically.
-
-## How It Works
+### From intent to execution
 
 <p align="center">
   <img src="assets/overview.png" width="100%" alt="Omni-IO architecture overview">
@@ -318,6 +335,8 @@ Questions, bug reports, feature requests, and workflow ideas are welcome in [Git
 
 If you are interested in Omni-IO Skills, please contact [Yanlin Li](mailto:yanlin.li@u.nus.edu) or [Hao Fei](mailto:haofei7419@gmail.com). If you use this project in your research or applications, please cite our paper:
 
+> [!NOTE]
+> The BibTeX entry below is a temporary placeholder. Replace the arXiv identifier and publication details when the paper becomes public.
 
 ```bibtex
 @article{li2026omniio,
