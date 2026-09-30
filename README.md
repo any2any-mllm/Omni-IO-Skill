@@ -29,6 +29,9 @@ Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating
 
 </div>
 
+---
+https://github.com/any2any-mllm/Omni-IO-Skill/blob/main/assets/Omni-IO-Skills_pr_video.mp4
+
 ## News
 
 - **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
