@@ -1,11 +1,11 @@
 <div align="center">
 
 <h1>
-  <img src="assets/omni-io-logo.png" width="60" align="absmiddle" alt="Omni-IO Skills logo">
+  <img src="assets/omni-io-logo.png" width="72" align="absmiddle" alt="Omni-IO Skills logo">
   Omni-IO Skills
 </h1>
 
-**Harnessing your coding agent to become omni-native—with multimodal eyes, ears, and creative tools.**
+**Harnessing your coding agent to become omni-native.**
 
 Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating, and coordinating images, video, audio, documents, 3D assets, code, and web content—all from natural-language requests.
 
@@ -14,7 +14,7 @@ Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating
   <a href="https://agentskills.io/"><img src="https://img.shields.io/badge/Agent_Skills-compatible-6d5dfc?style=flat-square" alt="Agent Skills compatible"></a>
   <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP-stdio-0b7285?style=flat-square" alt="MCP stdio server"></a>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 or newer">
-  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square&logo=arxiv" alt="arXiv paper"></a>
+  <a href="https://arxiv.org/abs/2609.31847"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square&logo=arxiv" alt="arXiv paper"></a>
 </p>
 
 <p>
@@ -34,7 +34,8 @@ Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating
 
 ## News
 
-- **[Sep 2026]** We release **Omni-IO Skills v3.0**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
+- **[Sep 2026]** We release our technical report, [**Omni-IO Skills: Harnessing Your Agent Omni-Native**](https://arxiv.org/abs/2609.31847).
+- **[Aug 2026]** We release **Omni-IO Skills**, a plug-and-play agent harness for omni-modal understanding, generation, and cross-modal workflows.
 
 ## What You Can Do
 
@@ -77,27 +78,65 @@ Modalities are the building blocks rather than the starting point. Any of them c
 
 ## Examples
 
-<!--
-Add each recorded example as one row. Put the prompt and any input assets in the
-left column, and embed the corresponding output video in the right column.
--->
+Twenty cases pair source media with finished artifacts. Each card links to its prompt, inputs, outputs, and screen recording.
+
+### Creative campaigns & visual stories
 
 <table>
   <tr>
-    <th width="50%">Input</th>
-    <th width="50%">Output</th>
+    <td width="50%" valign="top"><img src="./examples/case_01_owala_product_launch/teaser.jpg" width="440" alt="Product launch: Five bottle photos to Poster, video, and product page"><br><strong>01 · Product launch</strong><br><a href="./examples/case_01_owala_product_launch/PROMPT.txt">Prompt</a> · <a href="./examples/case_01_owala_product_launch/inputs/">Inputs</a> · <a href="./examples/case_01_owala_product_launch/outputs/">Outputs</a> · <a href="./examples/case_01_owala_product_launch/case01.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_03_fossil_exhibit_teaser/teaser.jpg" width="440" alt="Fossil exhibit: Fossil footage and reporting audio to Opening-night campaign"><br><strong>03 · Fossil exhibit</strong><br><a href="./examples/case_03_fossil_exhibit_teaser/PROMPT.txt">Prompt</a> · <a href="./examples/case_03_fossil_exhibit_teaser/inputs/">Inputs</a> · <a href="./examples/case_03_fossil_exhibit_teaser/outputs/">Outputs</a> · <a href="./examples/case_03_fossil_exhibit_teaser/case03.mov">Video</a></td>
   </tr>
   <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td width="50%" valign="top"><img src="./examples/case_07_glowing_garden_event_multiturn/teaser.jpg" width="440" alt="Glowing garden · two turns: Design presentation and narration to Event campaign adapted for a family audience"><br><strong>07 · Glowing garden · two turns</strong><br><a href="./examples/case_07_glowing_garden_event_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_07_glowing_garden_event_multiturn/inputs/">Inputs</a> · <a href="./examples/case_07_glowing_garden_event_multiturn/outputs/">Outputs</a> · <a href="./examples/case_07_glowing_garden_event_multiturn/case07.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_11_viking_artifact_exhibit/teaser.jpg" width="440" alt="Viking artifact exhibit: Artifact photo and historical narration to Gallery campaign and annotated artifact view"><br><strong>11 · Viking artifact exhibit</strong><br><a href="./examples/case_11_viking_artifact_exhibit/PROMPT.txt">Prompt</a> · <a href="./examples/case_11_viking_artifact_exhibit/inputs/">Inputs</a> · <a href="./examples/case_11_viking_artifact_exhibit/outputs/">Outputs</a> · <a href="./examples/case_11_viking_artifact_exhibit/case11.mov">Video</a></td>
   </tr>
   <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td width="50%" valign="top"><img src="./examples/case_13_truffle_ingredient_story/teaser.jpg" width="440" alt="Truffle ingredient story: Truffle photo and culinary narration to Recipe story, cards, and storage tips"><br><strong>13 · Truffle ingredient story</strong><br><a href="./examples/case_13_truffle_ingredient_story/PROMPT.txt">Prompt</a> · <a href="./examples/case_13_truffle_ingredient_story/inputs/">Inputs</a> · <a href="./examples/case_13_truffle_ingredient_story/outputs/">Outputs</a> · <a href="./examples/case_13_truffle_ingredient_story/case13.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_18_cinematic_mood_trailer_multiturn/teaser.jpg" width="440" alt="Cinematic trailer · two turns: Footage and soundtrack to Trailer recut with a more suspenseful mood"><br><strong>18 · Cinematic trailer · two turns</strong><br><a href="./examples/case_18_cinematic_mood_trailer_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_18_cinematic_mood_trailer_multiturn/inputs/">Inputs</a> · <a href="./examples/case_18_cinematic_mood_trailer_multiturn/outputs/">Outputs</a> · <a href="./examples/case_18_cinematic_mood_trailer_multiturn/case18.mov">Video</a></td>
+  </tr>
+</table>
+
+### Learning & explainers
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_02_korean_night_market_masterclass/teaser.jpg" width="440" alt="Illustration masterclass: Instructional video and narration to 45-second tutorial and visual teaching materials"><br><strong>02 · Illustration masterclass</strong><br><a href="./examples/case_02_korean_night_market_masterclass/PROMPT.txt">Prompt</a> · <a href="./examples/case_02_korean_night_market_masterclass/inputs/">Inputs</a> · <a href="./examples/case_02_korean_night_market_masterclass/outputs/">Outputs</a> · <a href="./examples/case_02_korean_night_market_masterclass/case02.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_08_bird_field_lesson_multiturn/teaser.jpg" width="440" alt="Bird field lesson · two turns: Bird photograph and call to Identification lesson adapted for children"><br><strong>08 · Bird field lesson · two turns</strong><br><a href="./examples/case_08_bird_field_lesson_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_08_bird_field_lesson_multiturn/inputs/">Inputs</a> · <a href="./examples/case_08_bird_field_lesson_multiturn/outputs/">Outputs</a> · <a href="./examples/case_08_bird_field_lesson_multiturn/case08.mov">Video</a></td>
   </tr>
   <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td width="50%" valign="top"><img src="./examples/case_09_wallace_line_explainer/teaser.jpg" width="440" alt="Wallace Line explainer: Video and narration to Museum video, maps, comparison, and quiz"><br><strong>09 · Wallace Line explainer</strong><br><a href="./examples/case_09_wallace_line_explainer/PROMPT.txt">Prompt</a> · <a href="./examples/case_09_wallace_line_explainer/inputs/">Inputs</a> · <a href="./examples/case_09_wallace_line_explainer/outputs/">Outputs</a> · <a href="./examples/case_09_wallace_line_explainer/case09.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_10_pet_care_microcourse/teaser.jpg" width="440" alt="Pet care micro-course: Setup photo, demonstration video, and audio to Training video and care checklist"><br><strong>10 · Pet care micro-course</strong><br><a href="./examples/case_10_pet_care_microcourse/PROMPT.txt">Prompt</a> · <a href="./examples/case_10_pet_care_microcourse/inputs/">Inputs</a> · <a href="./examples/case_10_pet_care_microcourse/outputs/">Outputs</a> · <a href="./examples/case_10_pet_care_microcourse/case10.mov">Video</a></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_15_climate_anomaly_explainer/teaser.jpg" width="440" alt="Climate anomaly explainer: Three sea-temperature anomaly maps to Science-news video and annotated maps"><br><strong>15 · Climate anomaly explainer</strong><br><a href="./examples/case_15_climate_anomaly_explainer/PROMPT.txt">Prompt</a> · <a href="./examples/case_15_climate_anomaly_explainer/inputs/">Inputs</a> · <a href="./examples/case_15_climate_anomaly_explainer/outputs/">Outputs</a> · <a href="./examples/case_15_climate_anomaly_explainer/case15.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_16_zealandia_planetarium_multiturn/teaser.jpg" width="440" alt="Zealandia planetarium · two turns: Geology footage and narration to Planetarium lesson adapted for younger visitors"><br><strong>16 · Zealandia planetarium · two turns</strong><br><a href="./examples/case_16_zealandia_planetarium_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_16_zealandia_planetarium_multiturn/inputs/">Inputs</a> · <a href="./examples/case_16_zealandia_planetarium_multiturn/outputs/">Outputs</a> · <a href="./examples/case_16_zealandia_planetarium_multiturn/case16.mov">Video</a></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_17_cell_biology_gallery_multiturn/teaser.jpg" width="440" alt="Cell biology gallery · two turns: Animation and narration to Gallery lesson adapted for younger visitors"><br><strong>17 · Cell biology gallery · two turns</strong><br><a href="./examples/case_17_cell_biology_gallery_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_17_cell_biology_gallery_multiturn/inputs/">Inputs</a> · <a href="./examples/case_17_cell_biology_gallery_multiturn/outputs/">Outputs</a> · <a href="./examples/case_17_cell_biology_gallery_multiturn/case17.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_19_force_motion_exhibit/teaser.jpg" width="440" alt="Force and motion exhibit: Lab photograph and spoken explanation to Narrated exhibit, experiment card, and quiz"><br><strong>19 · Force and motion exhibit</strong><br><a href="./examples/case_19_force_motion_exhibit/PROMPT.txt">Prompt</a> · <a href="./examples/case_19_force_motion_exhibit/inputs/">Inputs</a> · <a href="./examples/case_19_force_motion_exhibit/outputs/">Outputs</a> · <a href="./examples/case_19_force_motion_exhibit/case19.mov">Video</a></td>
+  </tr>
+</table>
+
+### 3D & interactive exhibits
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_04_avocado_3d_asset/teaser.jpg" width="440" alt="Avocado 3D asset: Spoken food description to Textured model, renders, and interactive viewer"><br><strong>04 · Avocado 3D asset</strong><br><a href="./examples/case_04_avocado_3d_asset/PROMPT.txt">Prompt</a> · <a href="./examples/case_04_avocado_3d_asset/inputs/">Inputs</a> · <a href="./examples/case_04_avocado_3d_asset/outputs/">Outputs</a> · <a href="./examples/case_04_avocado_3d_asset/case04.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_05_engineering_scan_restoration/teaser.jpg" width="440" alt="Scan restoration: Partial point cloud to Reconstructed object and inspection views"><br><strong>05 · Scan restoration</strong><br><a href="./examples/case_05_engineering_scan_restoration/PROMPT.txt">Prompt</a> · <a href="./examples/case_05_engineering_scan_restoration/inputs/">Inputs</a> · <a href="./examples/case_05_engineering_scan_restoration/outputs/">Outputs</a> · <a href="./examples/case_05_engineering_scan_restoration/case05.mov">Video</a></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_14_molecular_3d_explorer/teaser.jpg" width="440" alt="Molecular 3D explorer: Molecular structure image to Labelled model and interactive exhibit"><br><strong>14 · Molecular 3D explorer</strong><br><a href="./examples/case_14_molecular_3d_explorer/PROMPT.txt">Prompt</a> · <a href="./examples/case_14_molecular_3d_explorer/inputs/">Inputs</a> · <a href="./examples/case_14_molecular_3d_explorer/outputs/">Outputs</a> · <a href="./examples/case_14_molecular_3d_explorer/case14.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_20_food_scan_3d_viewer/teaser.jpg" width="440" alt="Food scan 3D viewer: Textured OBJ scan and reference image to GLB model, inspection views, and viewer"><br><strong>20 · Food scan 3D viewer</strong><br><a href="./examples/case_20_food_scan_3d_viewer/PROMPT.txt">Prompt</a> · <a href="./examples/case_20_food_scan_3d_viewer/inputs/">Inputs</a> · <a href="./examples/case_20_food_scan_3d_viewer/outputs/">Outputs</a> · <a href="./examples/case_20_food_scan_3d_viewer/case20.mov">Video</a></td>
+  </tr>
+</table>
+
+### Sports & narrative recaps
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="./examples/case_06_volleyball_recap_multiturn/teaser.jpg" width="440" alt="Volleyball recap · two turns: Match image sequence and commentary to Narrated recap revised for faster viewing"><br><strong>06 · Volleyball recap · two turns</strong><br><a href="./examples/case_06_volleyball_recap_multiturn/PROMPT.txt">Prompt</a> · <a href="./examples/case_06_volleyball_recap_multiturn/inputs/">Inputs</a> · <a href="./examples/case_06_volleyball_recap_multiturn/outputs/">Outputs</a> · <a href="./examples/case_06_volleyball_recap_multiturn/case06.mov">Video</a></td>
+    <td width="50%" valign="top"><img src="./examples/case_12_chess_comeback_recap/teaser.jpg" width="440" alt="Chess comeback: Fourteen board images to Narrated recap with annotated moves"><br><strong>12 · Chess comeback</strong><br><a href="./examples/case_12_chess_comeback_recap/PROMPT.txt">Prompt</a> · <a href="./examples/case_12_chess_comeback_recap/inputs/">Inputs</a> · <a href="./examples/case_12_chess_comeback_recap/outputs/">Outputs</a> · <a href="./examples/case_12_chess_comeback_recap/case12.mov">Video</a></td>
   </tr>
 </table>
 
@@ -336,16 +375,13 @@ Questions, bug reports, feature requests, and workflow ideas are welcome in [Git
 
 ## Citation
 
-If you are interested in Omni-IO Skills, please contact [Yanlin Li](mailto:yanlin.li@u.nus.edu) or [Hao Fei](mailto:haofei7419@gmail.com). If you use this project in your research or applications, please cite our paper:
-
-> [!NOTE]
-> The BibTeX entry below is a temporary placeholder. Replace the arXiv identifier and publication details when the paper becomes public.
+If you are interested in Omni-IO Skills, please contact [Yanlin Li](mailto:yanlin.li@u.nus.edu) or [Hao Fei](mailto:haofei7419@gmail.com). If you use this project in your research or applications, please cite [our paper](https://arxiv.org/abs/2609.31847):
 
 ```bibtex
 @article{li2026omniio,
   title   = {Omni-IO Skills: Harnessing Your Agent Omni-Native},
   author  = {Li, Yanlin and Hao, Mingyang and Wu, Shengqiong and Fei, Hao and Lee, Mong-Li and Hsu, Wynne},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2609.31847},
   year    = {2026}
 }
 ```
