@@ -1,0 +1,340 @@
+{
+  "atoms": [
+    {
+      "id": 0,
+      "el": "N",
+      "p": [
+        1.38,
+        0.0,
+        0.0
+      ],
+      "label": "Pyridine N",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 1,
+      "el": "C",
+      "p": [
+        0.6900000000000001,
+        1.195115057222525,
+        0.0
+      ],
+      "label": "C2",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 2,
+      "el": "C",
+      "p": [
+        -0.6899999999999997,
+        1.1951150572225253,
+        0.0
+      ],
+      "label": "C3",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 3,
+      "el": "C",
+      "p": [
+        -1.38,
+        1.6900125828233474e-16,
+        0.0
+      ],
+      "label": "C4",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 4,
+      "el": "C",
+      "p": [
+        -0.6900000000000006,
+        -1.1951150572225249,
+        0.0
+      ],
+      "label": "C5",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 5,
+      "el": "C",
+      "p": [
+        0.6900000000000001,
+        -1.195115057222525,
+        0.0
+      ],
+      "label": "C6",
+      "region": "Pyridine core"
+    },
+    {
+      "id": 6,
+      "el": "O",
+      "p": [
+        2.15,
+        1.48,
+        0.08
+      ],
+      "label": "Aryl ether O",
+      "region": "Oxyacetic acid"
+    },
+    {
+      "id": 7,
+      "el": "C",
+      "p": [
+        3.28,
+        1.03,
+        0.45
+      ],
+      "label": "O\u2013CH2",
+      "region": "Oxyacetic acid"
+    },
+    {
+      "id": 8,
+      "el": "C",
+      "p": [
+        4.42,
+        1.78,
+        0.12
+      ],
+      "label": "Carboxyl carbon",
+      "region": "Carboxylic acid"
+    },
+    {
+      "id": 9,
+      "el": "O",
+      "p": [
+        4.43,
+        3.02,
+        0.0
+      ],
+      "label": "Carbonyl O",
+      "region": "Carboxylic acid"
+    },
+    {
+      "id": 10,
+      "el": "O",
+      "p": [
+        5.54,
+        1.17,
+        -0.15
+      ],
+      "label": "Hydroxyl O",
+      "region": "Carboxylic acid"
+    },
+    {
+      "id": 11,
+      "el": "C",
+      "p": [
+        -0.52,
+        2.55,
+        0.18
+      ],
+      "label": "Cyano carbon",
+      "region": "Nitrile"
+    },
+    {
+      "id": 12,
+      "el": "N",
+      "p": [
+        -0.7,
+        3.72,
+        0.32
+      ],
+      "label": "Cyano N",
+      "region": "Nitrile"
+    },
+    {
+      "id": 13,
+      "el": "C",
+      "p": [
+        -2.6,
+        0.45,
+        -0.42
+      ],
+      "label": "Benzylic CH2",
+      "region": "2-methoxyethyl"
+    },
+    {
+      "id": 14,
+      "el": "C",
+      "p": [
+        -3.72,
+        1.19,
+        0.1
+      ],
+      "label": "CH2",
+      "region": "2-methoxyethyl"
+    },
+    {
+      "id": 15,
+      "el": "O",
+      "p": [
+        -4.82,
+        0.45,
+        0.38
+      ],
+      "label": "Ether O",
+      "region": "2-methoxyethyl"
+    },
+    {
+      "id": 16,
+      "el": "C",
+      "p": [
+        -5.9,
+        1.17,
+        0.02
+      ],
+      "label": "Methoxy CH3",
+      "region": "2-methoxyethyl"
+    },
+    {
+      "id": 17,
+      "el": "Br",
+      "p": [
+        -2.34,
+        -1.24,
+        0.36
+      ],
+      "label": "Bromine",
+      "region": "Aryl bromide"
+    },
+    {
+      "id": 18,
+      "el": "C",
+      "p": [
+        0.55,
+        -2.55,
+        -0.42
+      ],
+      "label": "Methyl CH3",
+      "region": "Methyl"
+    }
+  ],
+  "bonds": [
+    {
+      "a": 0,
+      "b": 1,
+      "order": 1.5
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "order": 1.5
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "order": 1.5
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "order": 1.5
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "order": 1.5
+    },
+    {
+      "a": 5,
+      "b": 0,
+      "order": 1.5
+    },
+    {
+      "a": 1,
+      "b": 6,
+      "order": 1
+    },
+    {
+      "a": 6,
+      "b": 7,
+      "order": 1
+    },
+    {
+      "a": 7,
+      "b": 8,
+      "order": 1
+    },
+    {
+      "a": 8,
+      "b": 9,
+      "order": 2
+    },
+    {
+      "a": 8,
+      "b": 10,
+      "order": 1
+    },
+    {
+      "a": 2,
+      "b": 11,
+      "order": 1
+    },
+    {
+      "a": 11,
+      "b": 12,
+      "order": 3
+    },
+    {
+      "a": 3,
+      "b": 13,
+      "order": 1
+    },
+    {
+      "a": 13,
+      "b": 14,
+      "order": 1
+    },
+    {
+      "a": 14,
+      "b": 15,
+      "order": 1
+    },
+    {
+      "a": 15,
+      "b": 16,
+      "order": 1
+    },
+    {
+      "a": 4,
+      "b": 17,
+      "order": 1
+    },
+    {
+      "a": 5,
+      "b": 18,
+      "order": 1
+    }
+  ],
+  "regions": {
+    "Pyridine core": {
+      "color": "#36a3ff",
+      "note": "Electron-poor aromatic heterocycle; ring N can coordinate metals or accept a proton."
+    },
+    "Nitrile": {
+      "color": "#b55cff",
+      "note": "Compact polar handle; the nitrile carbon is electrophilic and can be hydrolyzed under forcing conditions."
+    },
+    "Aryl bromide": {
+      "color": "#ff9a3c",
+      "note": "Synthetic handle for cross-coupling or metal\u2013halogen exchange."
+    },
+    "Carboxylic acid": {
+      "color": "#ff4f72",
+      "note": "Acidic, hydrogen-bonding terminus; supports salt, ester, and amide formation."
+    },
+    "Oxyacetic acid": {
+      "color": "#ff7390",
+      "note": "Flexible ether-linked acid arm connecting polarity to the aromatic core."
+    },
+    "2-methoxyethyl": {
+      "color": "#3fd8a5",
+      "note": "Flexible ether side chain; tunes polarity, solubility, and conformational freedom."
+    },
+    "Methyl": {
+      "color": "#ffd166",
+      "note": "Small hydrophobic substituent that influences steric shape and lipophilicity."
+    }
+  }
+}

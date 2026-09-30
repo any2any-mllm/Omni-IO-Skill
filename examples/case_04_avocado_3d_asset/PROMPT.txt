@@ -1,0 +1,1 @@
+Use the food description to create a stylized but recognizable avocado learning asset. Deliver a textured GLB model, three labelled renders, a 360-degree turntable video, and a self-contained web viewer with two feature hotspots.

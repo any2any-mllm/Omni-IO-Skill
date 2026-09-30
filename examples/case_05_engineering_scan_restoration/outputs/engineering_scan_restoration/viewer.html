@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THD 0521-01 — Reconstruction Inspection</title>
+  <style>
+    :root{color-scheme:dark;--bg:#071017;--panel:rgba(13,26,36,.82);--line:#284552;--teal:#41d6c3;--text:#eaf3f7;--muted:#8fa5b1}
+    *{box-sizing:border-box}html,body,#stage{margin:0;width:100%;height:100%;overflow:hidden;background:radial-gradient(circle at 50% 38%,#15303c 0,#071017 58%,#03070a 100%);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--text)}
+    canvas{display:block}.hud{position:fixed;z-index:3;pointer-events:none}.header{left:28px;top:24px}.eyebrow{font-size:11px;letter-spacing:.2em;color:var(--teal);font-weight:700}.header h1{font-size:22px;margin:8px 0 4px;letter-spacing:.02em}.header p{margin:0;color:var(--muted);font-size:12px}.controls{left:28px;bottom:24px;padding:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;backdrop-filter:blur(10px);pointer-events:auto}.controls button{appearance:none;border:1px solid var(--line);background:#10222c;color:var(--text);padding:9px 12px;border-radius:8px;margin:2px;cursor:pointer}.controls button.active{border-color:var(--teal);color:var(--teal)}
+    .stats{right:24px;top:24px;width:230px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(10px)}.stats b{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.stats span{font-variant-numeric:tabular-nums;font-size:13px}.row{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06)}.row:last-child{border:0}
+    .hotspot{position:fixed;z-index:4;width:28px;height:28px;border:1px solid #9cfff3;border-radius:50%;background:rgba(65,214,195,.18);box-shadow:0 0 0 7px rgba(65,214,195,.08),0 0 22px rgba(65,214,195,.45);color:white;cursor:pointer;transform:translate(-50%,-50%)}.hotspot:before{content:'';position:absolute;inset:8px;border-radius:50%;background:var(--teal)}.card{display:none;position:absolute;left:36px;top:-8px;width:250px;padding:13px 14px;background:rgba(8,18,25,.96);border:1px solid var(--line);border-radius:10px;text-align:left;pointer-events:none}.hotspot.open .card{display:block}.card strong{display:block;font-size:13px;margin-bottom:6px}.card em{display:block;color:var(--muted);font-style:normal;font-size:12px;line-height:1.45}
+    .help{right:24px;bottom:22px;color:var(--muted);font-size:11px;text-align:right}@media(max-width:700px){.stats{display:none}.header{left:16px;top:16px}.controls{left:12px;bottom:12px}.help{display:none}}
+  </style>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="stage"></div>
+  <div class="hud header"><div class="eyebrow">ENGINEERING SCAN RESTORATION</div><h1>THD 0521-01</h1><p>Completed envelope + original measured samples</p></div>
+  <div class="hud stats"><div class="row"><b>OBSERVED SAMPLES</b><span>620 points</span></div><div class="row"><b>COMPLETION METHOD</b><span>Conservative convex envelope</span></div><div class="row"><b>BOUNDS</b><span>0.0654 × 0.3062 × 0.8395</span></div><div class="row"><b>SOURCE UNITS</b><span>Unspecified</span></div></div>
+  <div class="hud controls"><button id="points" class="active">Measured points</button><button id="wire">Wireframe</button><button id="reset">Reset view</button></div>
+  <div class="hud help">Drag to orbit · Scroll to zoom · Click markers to inspect</div>
+  <script type="module">
+    import * as THREE from 'three';
+    import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+    import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+    const stage=document.querySelector('#stage'), scene=new THREE.Scene();
+    scene.fog=new THREE.FogExp2(0x071017,0.75);
+    const camera=new THREE.PerspectiveCamera(34,innerWidth/innerHeight,.001,100); camera.up.set(0,0,1); camera.position.set(1.55,0,.16);
+    const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true}); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setSize(innerWidth,innerHeight); renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=1.25; stage.appendChild(renderer.domElement);
+    scene.add(new THREE.HemisphereLight(0xcceeff,0x172129,2.3)); const key=new THREE.DirectionalLight(0xffffff,4);key.position.set(2,-3,4);scene.add(key); const rim=new THREE.DirectionalLight(0x41d6c3,3);rim.position.set(-3,2,1);scene.add(rim);
+    const controls=new OrbitControls(camera,renderer.domElement); controls.enableDamping=true; controls.target.set(-.1927,0,0); controls.minDistance=.55; controls.maxDistance=4;
+    let model, pointsObj, materials=[]; const data=await fetch('./scan_data.json').then(r=>r.json());
+    const pos=new Float32Array(data.points.flat()); const pg=new THREE.BufferGeometry(); pg.setAttribute('position',new THREE.BufferAttribute(pos,3)); const pm=new THREE.PointsMaterial({color:0x5affea,size:.016,sizeAttenuation:true,transparent:true,opacity:1,depthTest:false}); pointsObj=new THREE.Points(pg,pm); pointsObj.renderOrder=4; scene.add(pointsObj);
+    new GLTFLoader().load('./thd_0521_01_reconstructed.glb',g=>{model=g.scene;model.traverse(o=>{if(o.isMesh){o.material=new THREE.MeshBasicMaterial({color:0x83c3e0,side:THREE.DoubleSide});materials.push(o.material)}});scene.add(model)});
+    const grid=new THREE.GridHelper(1.3,13,0x31505d,0x172a33);grid.rotation.z=Math.PI/2;grid.position.x=data.bounds[0][0]-.045;scene.add(grid);
+    const spots=data.hotspots.map((h,i)=>{const el=document.createElement('button');el.className='hotspot';el.setAttribute('aria-label',h.title);el.innerHTML=`<span class="card"><strong>${h.title}</strong><em>${h.body}</em></span>`;el.onclick=()=>{document.querySelectorAll('.hotspot').forEach(x=>x!==el&&x.classList.remove('open'));el.classList.toggle('open')};document.body.appendChild(el);return{el,p:new THREE.Vector3(...h.position)}});
+    function reset(){camera.position.set(1.55,0,.16);controls.target.set(-.1927,0,0);controls.update()} reset();
+    document.querySelector('#points').onclick=e=>{pointsObj.visible=!pointsObj.visible;e.target.classList.toggle('active',pointsObj.visible)};
+    document.querySelector('#wire').onclick=e=>{materials.forEach(m=>m.wireframe=!m.wireframe);e.target.classList.toggle('active')}; document.querySelector('#reset').onclick=reset;
+    addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+    function animate(){requestAnimationFrame(animate);controls.update();spots.forEach(s=>{const p=s.p.clone().project(camera);s.el.style.left=`${(p.x*.5+.5)*innerWidth}px`;s.el.style.top=`${(-p.y*.5+.5)*innerHeight}px`;s.el.style.display=(p.z>-1&&p.z<1)?'block':'none'});renderer.render(scene,camera)}animate();
+  </script>
+</body>
+</html>

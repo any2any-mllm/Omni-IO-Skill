@@ -1,0 +1,18 @@
+{
+  "bird": "Killdeer (Charadrius vociferus)",
+  "identification_basis": [
+    "two black breast bands",
+    "white throat/collar",
+    "dark facial mask",
+    "brown upperparts",
+    "long pale legs",
+    "repeated call energy near 4 kHz"
+  ],
+  "narration": "Meet the Killdeer, a shorebird often found on lawns and open fields. Look for two bold black breast bands, a white collar, a dark face mask, brown upperparts, long pale legs, and a slim bill. Now listen for its clear, repeated kill-deer whistle. Watch quietly from a distance.",
+  "deliverables": [
+    "/Users/haomingyang/Documents/Codex/2026-09-17/new-chat-6/outputs/killdeer_field_guide_30s.mp4",
+    "/Users/haomingyang/Documents/Codex/2026-09-17/new-chat-6/outputs/killdeer_call_clean.wav",
+    "/Users/haomingyang/Documents/Codex/2026-09-17/new-chat-6/outputs/killdeer_identification_card.png",
+    "/Users/haomingyang/Documents/Codex/2026-09-17/new-chat-6/outputs/killdeer_observation_quiz.pdf"
+  ]
+}

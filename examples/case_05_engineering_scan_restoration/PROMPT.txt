@@ -1,0 +1,1 @@
+Reconstruct the supplied partial point cloud as a presentation-ready object while preserving its observed geometry. Deliver a completed GLB model, front/side/top inspection renders, a 360-degree turntable video, and an interactive web viewer with two inspection hotspots.

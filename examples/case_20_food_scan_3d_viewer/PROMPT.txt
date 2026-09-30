@@ -1,0 +1,1 @@
+Convert the textured food scan into a polished interactive exhibit that preserves the source shape and material cues. Deliver a GLB model, three inspection renders, a 360-degree turntable video, and a self-contained web viewer with two labelled hotspots.

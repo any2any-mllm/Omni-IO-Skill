@@ -1,0 +1,1 @@
+Transform this molecular structure into an interactive chemistry exhibit that distinguishes its key regions and reactions visually. Deliver a labelled 3D model, a 30-second motion explainer, three orthographic renders, and a self-contained web viewer with hotspots.
