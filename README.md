@@ -30,7 +30,7 @@ Omni-IO is a plug-and-play skill set and MCP runtime for understanding, creating
 </div>
 
 ---
-https://github.com/any2any-mllm/Omni-IO-Skill/blob/main/assets/Omni-IO-Skills_pr_video.mp4
+[https://github.com/any2any-mllm/Omni-IO-Skill/blob/main/assets/Omni-IO-Skills_pr_video.mp4](https://github.com/user-attachments/assets/8d199381-64a6-4c79-93e9-073249e9205b)
 
 ## News
 
